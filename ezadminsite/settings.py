@@ -27,7 +27,7 @@ def gfe(key, default=None):
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insescure-1(-h=46b-%9d2^1=45+q^gz*cwhze@$*51#h$fh^0y63%k2%wm'
+SECRET_KEY = gfe('SECRET_KEY','django-insescure-1(-h=46b-%9d2^1=45+q^gz*cwhze@$*51#h$fh^0y63%k2%wm')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -40,6 +40,7 @@ ALLOWED_HOSTS = []
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
+    'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
