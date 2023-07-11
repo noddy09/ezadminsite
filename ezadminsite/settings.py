@@ -83,12 +83,44 @@ WSGI_APPLICATION = 'ezadminsite.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': gfe('DB_ENGINE','django.db.backends.postgresql_psycopg2'),
-        'NAME': gfe('DB_NAME','test_db'),
-        'USER': gfe('DB_USER','test_user'),
-        'PASSWORD': gfe('DB_PASSWORD','Pass@123'),
+        'ENGINE': gfe('DB_ENGINE','django.db.backends.mysql'),
+        'NAME': gfe('DB_NAME','oneplay_cloud'),
+        'USER': gfe('DB_USER','noob'),
+        'PASSWORD': gfe('DB_PASSWORD','1234'),
         'HOST': gfe('DB_HOST','localhost'),
-        'PORT': gfe('DB_PORT','5432'),
+        'PORT': gfe('DB_PORT','3307'),
+    },
+    'games': {
+        'ENGINE': gfe('DB_ENGINE','django.db.backends.mysql'),
+        'NAME': gfe('DB_NAME','oneplay_games'),
+        'USER': gfe('DB_USER','noob'),
+        'PASSWORD': gfe('DB_PASSWORD','1234'),
+        'HOST': gfe('DB_HOST','localhost'),
+        'PORT': gfe('DB_PORT','3307'),
+    },
+    'partners': {
+        'ENGINE': gfe('DB_ENGINE','django.db.backends.mysql'),
+        'NAME': gfe('DB_NAME','oneplay_partners'),
+        'USER': gfe('DB_USER','noob'),
+        'PASSWORD': gfe('DB_PASSWORD','1234'),
+        'HOST': gfe('DB_HOST','localhost'),
+        'PORT': gfe('DB_PORT','3307'),
+    },
+    'portal2': {
+        'ENGINE': gfe('DB_ENGINE','django.db.backends.mysql'),
+        'NAME': gfe('DB_NAME','oneplay_portal2'),
+        'USER': gfe('DB_USER','noob'),
+        'PASSWORD': gfe('DB_PASSWORD','1234'),
+        'HOST': gfe('DB_HOST','localhost'),
+        'PORT': gfe('DB_PORT','3307'),
+    },
+    'users': {
+        'ENGINE': gfe('DB_ENGINE','django.db.backends.mysql'),
+        'NAME': gfe('DB_NAME','oneplay_users'),
+        'USER': gfe('DB_USER','noob'),
+        'PASSWORD': gfe('DB_PASSWORD','1234'),
+        'HOST': gfe('DB_HOST','localhost'),
+        'PORT': gfe('DB_PORT','3307'),
     }
 }
 
