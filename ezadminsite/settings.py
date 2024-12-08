@@ -82,9 +82,9 @@ WSGI_APPLICATION = 'ezadminsite.wsgi.application'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
 DATABASES = {
-    'default': {
+    'app1': {
         'ENGINE': gfe('DB_ENGINE','django.db.backends.postgresql_psycopg2'),
-        'NAME': gfe('DB_NAME','test_db'),
+        'NAME': gfe('DB_NAME','db_app1'),
         'USER': gfe('DB_USER','test_user'),
         'PASSWORD': gfe('DB_PASSWORD','Pass@123'),
         'HOST': gfe('DB_HOST','localhost'),
@@ -92,6 +92,7 @@ DATABASES = {
     }
 }
 
+DATABASE_ROUTERS = ['path.to.DynamicDatabaseRouter']
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
