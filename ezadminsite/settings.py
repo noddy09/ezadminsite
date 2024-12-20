@@ -31,6 +31,11 @@ SECRET_KEY = gfe('SECRET_KEY','django-insescure-1(-h=46b-%9d2^1=45+q^gz*cwhze@$*
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
+# settings.py
+
+# Use UTC for Django
+TIME_ZONE = 'UTC'
+USE_TZ = True
 
 ALLOWED_HOSTS = []
 
@@ -84,11 +89,14 @@ WSGI_APPLICATION = 'ezadminsite.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': gfe('DB_ENGINE','django.db.backends.postgresql_psycopg2'),
-        'NAME': gfe('DB_NAME','test_db'),
-        'USER': gfe('DB_USER','test_user'),
-        'PASSWORD': gfe('DB_PASSWORD','Pass@123'),
+        'NAME': gfe('DB_NAME','dvdrental'),
+        'USER': gfe('DB_USER','noddy'),
+        'PASSWORD': gfe('DB_PASSWORD','9678'),
         'HOST': gfe('DB_HOST','localhost'),
         'PORT': gfe('DB_PORT','5432'),
+        'OPTIONS': {
+            'options': '-c timezone=UTC',  # Ensure connection uses UTC
+        },
     }
 }
 
